@@ -1,7 +1,6 @@
 document.querySelector("#numberChanger")
 let changeOfNumber = document.querySelector("#numberChanger");
-changeOfNumber.innerHTML = 1;
-console.log(changeOfNumber);
+changeOfNumber = 0;
 
 document.querySelector("#decrease");
 let lowerNumber = document.querySelector("#decrease");
@@ -13,17 +12,21 @@ document.querySelector("#increase");
 let increaseNumber = document.querySelector("#increase");
 increaseNumber.style.backgroundColor = "red";
 
-// function incremental(){
-//     let i = 0;
-//     do {
-//       i += 1;
-//     } 
-// };
 
 
 
-increaseNumber.addEventListener("click", function incremental(){
-    let changeOfNumber = i;
-    let i = 0
-    for (i = 0; i < 0;i++)
+
+increaseNumber.addEventListener("click", function increment() {
+    changeOfNumber = changeOfNumber + 1;
+    console.log(changeOfNumber);
+});
+
+lowerNumber.addEventListener("click", function increment() {
+    changeOfNumber = changeOfNumber - 1;
+    console.log(changeOfNumber);
+});
+
+backToZero.addEventListener("click", function increment() { 
+     changeOfNumber = 0;
+    console.log(changeOfNumber);
 });
